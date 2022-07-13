@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Numero Tres Cifras</title>
+        </head>
+        <body>
+
+            <script>
+                /*3. Realice una página web que lea por teclado dos números, si el primero es mayor al 
+                segundo informar su suma y diferencia, en caso contrario informar el producto y la 
+                división del primero respecto al segundo.*/
+                
+                let num1 = prompt('ingrese el primer numero');
+                let num2 = prompt('ingrese el segundo numero');
+
+                if(parseInt(num1) > parseInt(num2)){
+
+                    let suma = parseInt(num1) + parseInt(num2);
+                    document.write('La suma de estos numeros es igual a: ' + suma + '<br>');
+
+                    let resta = parseInt(num1) - parseInt(num2);
+                    document.write('La diferencia de estos numeros es igual a: ' + resta);
+
+                }else{
+                    let producto = parseInt(num1) * parseInt(num2);
+                    document.write('El producto de estos numeros es igual a: ' + producto + '<br>');
+
+                    let division = parseInt(num1) / parseInt(num2);
+                    document.write('La division de estos numeros es igual a: ' + division);
+                }
+            </script>
+
+        </body>
+</html>

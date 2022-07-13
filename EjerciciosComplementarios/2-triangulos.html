@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Palabras</title>
+    </head>
+    <body>
+        <!--2. Realice una página web que lea los lados de 4 triángulos, e informar:-->
+      <script>
+        let trianguloA = [];
+        let trianguloB = [];
+        let trianguloC = [];
+        let trianguloD = [];
+        const tipo = ['Equilatero', 'Isosceles', 'Escaleno'];
+        let cantidad;
+        let equilatero=0;
+        let isosceles=0;
+        let escaleno=0;
+      
+        /*a) De cada uno de ellos, qué tipo de triángulo es: equilátero (tres lados iguales), 
+            isósceles (dos lados iguales), o escaleno (ningún lado igual)*/
+
+        for (let i = 0; i < 3; i++) {
+          trianguloA[i] = prompt(
+            "Introduzca el lado " + (i + 1) + " del triangulo A"
+          );
+        }
+        document.write('Que tipo de triangulos son: ' + '<br>');
+            if(trianguloA[0]==trianguloA[1] && trianguloA[0]==trianguloA[2] && trianguloA[1]==trianguloA[2]){
+                document.write('El Primer triangulo introducido es de tipo ' + tipo[0]  + '<br>');
+                equilatero++;
+            }else if( trianguloA[0]==trianguloA[1] || trianguloA[0]==trianguloA[2] || trianguloA[1]==trianguloA[2] ){
+                document.write('El Primer triangulo introducido es de tipo ' + tipo[1]  + '<br>');
+                isosceles++;
+            }else{
+                document.write('El Primer triangulo introducido es de tipo ' + tipo[2] + '<br>');
+                escaleno++;
+            }
+
+
+        for (let i = 0; i < 3; i++) {
+          trianguloB[i] = prompt(
+            "Introduzca el lado " + (i + 1) + " del triangulo B"
+          );
+        }
+
+        if(trianguloB[0]==trianguloB[1] && trianguloB[0]==trianguloB[2] && trianguloB[1]==trianguloB[2]){
+                document.write('El Segundo triangulo introducido es de tipo ' + tipo[0]  + '<br>');
+                equilatero++;
+
+            }else if( trianguloB[0]==trianguloB[1] || trianguloB[0]==trianguloB[2] || trianguloB[1]==trianguloB[2] ){
+                document.write('El Segundo triangulo introducido es de tipo ' + tipo[1]  + '<br>');
+                isosceles++;
+            }else{
+                document.write('El Segundo triangulo introducido es de tipo ' + tipo[2] + '<br>');
+                escaleno++;
+            }
+
+
+        for (let i = 0; i < 3; i++) {
+          trianguloC[i] = prompt(
+            "Introduzca el lado " + (i + 1) + " del triangulo C"
+          );
+        }
+
+        if(trianguloC[0]==trianguloC[1] && trianguloC[0]==trianguloC[2] && trianguloC[1]==trianguloC[2]){
+                document.write('El Tercer triangulo introducido es de tipo ' + tipo[0]  + '<br>');
+                equilatero++;
+            }else if( trianguloC[0]==trianguloC[1] || trianguloC[0]==trianguloC[2] || trianguloC[1]==trianguloC[2] ){
+                document.write('El Tercer triangulo introducido es de tipo ' + tipo[1]  + '<br>');
+                isosceles++;
+            }else{
+                document.write('El Tercer triangulo introducido es de tipo ' + tipo[2] + '<br>');
+                escaleno++
+            }
+
+        for (let i = 0; i < 3; i++) {
+          trianguloD[i] = prompt(
+            "Introduzca el lado " + (i + 1) + " del triangulo D"
+          );
+        }
+
+        /*b) Cantidad de triángulos de cada tipo*/
+
+        if(trianguloD[0]==trianguloD[1] && trianguloD[0]==trianguloD[2] && trianguloD[1]==trianguloD[2]){
+                document.write('El Cuarto triangulo introducido es de tipo ' + tipo[0] + '<br>');
+                equilatero++;
+            }else if( trianguloD[0]==trianguloD[1] || trianguloD[0]==trianguloD[2] || trianguloD[1]==trianguloD[2] ){
+                document.write('El Cuarto triangulo introducido es de tipo ' + tipo[1] + '<br>');
+                isosceles++;
+            }else{
+                document.write('El Cuarto triangulo introducido es de tipo ' + tipo[2] + '<br>');
+                escaleno++;
+            }
+
+            document.write('<br>');
+            document.write('Cantidad de triangulos de cada tipo: ' + '<br>'+
+            'Equilateros: ' + equilatero + '<br>' + 'Isosceles: ' + isosceles + '<br>' + 
+            'Escalenos: ' + escaleno + '<br>');
+
+            /*c) Tipo de triángulo del que hay menor cantidad.*/
+            document.write('<br>');
+            document.write('Tipo de triangulo del que hay menor cantidad: ' + '<br>');
+            if(equilatero <= isosceles && equilatero <= escaleno){
+                document.write('El triangulo del que hay menor cantidad es del tipo: ' + tipo[0] + '<br>');
+
+                if(equilatero == isosceles){
+                    document.write('El triangulo del que hay menor cantidad es del tipo: ' + tipo[1]);
+                }else if(equilatero == escaleno){
+                    document.write('El triangulo del que hay menor cantidad es del tipo: ' + tipo[2]);
+                }
+
+            }else if(isosceles <= equilatero && isosceles <= escaleno){
+                document.write('El triangulo del que hay menor cantidad es del tipo: ' + tipo[1] + '<br>');
+
+                if(isosceles == equilatero){
+                    document.write('El triangulo del que hay menor cantidad es del tipo: ' + tipo[0]);
+                }else if(isosceles == escaleno){
+                    document.write('El triangulo del que hay menor cantidad es del tipo: ' + tipo[2]);
+                }
+
+            }else if(escaleno <= equilatero && escaleno <= isosceles){
+
+                document.write('El triangulo del que hay menor cantidad es del tipo: ' + tipo[2] + '<br>');
+
+                if(escaleno == equilatero){
+                    document.write('El triangulo del que hay menor cantidad es del tipo: ' + tipo[0]);
+                }else if(escaleno == isosceles){
+                    document.write('El triangulo del que hay menor cantidad es del tipo: ' + tipo[1]);
+                }
+            }
+
+
+      </script>
+    </body>
+  </html>
+</html>

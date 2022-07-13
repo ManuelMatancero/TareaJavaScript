@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Numero Tres Cifras</title>
+        </head>
+        <body>
+            <script>
+                /*2. Realice una página web que permita cargar un número entero positivo de hasta tres 
+                cifras y muestre un mensaje indicando si tiene 1, 2, o 3 cifras.
+                */
+                let numero = prompt('Ingrese un nuemro entero positivo de tres cifras');
+
+                let size = numero.toString().length;
+
+                let negativo = parseInt(numero);
+
+                while(size > 3 || negativo < 0){
+
+                    negativo = parseInt(numero);
+                    size = numero.toString().length;
+                    
+                    if(size > 3){
+                        numero = prompt('El numero no puede tener mas de tres cifras');
+                    }else if(negativo < 0){
+                        numero = prompt('El numero no puede ser negativo');
+                    }
+                }
+
+                document.write('El numero introducido tiene ' + numero.length + ' cifras');
+
+            </script>
+        </body>
+</html>

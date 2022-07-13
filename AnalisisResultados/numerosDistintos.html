@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+ <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Numeros Distintos</title>
+        </head>
+        <body>
+          <!--  Realice una página web que cargue por teclado tres números distintos. Mostrar por 
+                pantalla el mayor y menor de ellos, no debe de aceptar números negativos ni números 
+                iguales.-->
+            <script>
+              let a = prompt('Ingrese el primer numero:','');
+              while(a < 0){
+                a = prompt('El numero no puede ser negativo:','');
+              }
+              let b = prompt('Ingrese el segundo numero:','');
+              while(b < 0 || b == a ){
+                if(b < 0) {
+                  b = prompt('El numero introducido no puede ser negativo:','');
+                }else if(b == a){
+                  b = prompt('El segundo numero no puede ser igual al primero','');
+                }  
+              }
+              let c = prompt('Ingrese el tercer numero:','');
+              while(c < 0 || c == a || c == b ){
+                if(c < 0) {
+                  c = prompt('El numero introducido no puede ser negativo:','');
+                }else if(c == a){
+                  c = prompt('El tercer numero no puede ser igual al primero','');
+                }  
+                else if(c == b){
+                  c = prompt('El tercer numero no puede ser igual al segundo','');
+                } 
+              }
+
+             let num1=  parseInt(a);
+             let num2 =parseInt(b);
+             let num3 = parseInt(c);
+
+              let numeroMayor;
+              let numeroMenor;
+
+              if(num1 > num2  && num1 > num3){
+
+                numeroMayor = num1;
+
+              }else if(num2 > num1 && num2 > num3){
+
+                numeroMayor = num2;
+
+              } else{
+
+                numeroMayor = num3;
+
+              }
+
+              if(num1 < num2  && num1 < num3){
+
+                numeroMenor = num1;
+
+              }else if(num2 < num1 && num2 < num3){
+
+                numeroMenor = num2;
+
+              } else{
+                numeroMenor = num3;
+              }
+
+              document.write('El numero mayor es: ' + numeroMayor + '<br>');
+              document.write('El numero menor es: ' + numeroMenor);
+
+            </script>
+
+        </body>
+</html>

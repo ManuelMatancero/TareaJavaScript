@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <html lang="en">
+        <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Palabras</title>
+        </head>
+        <body>
+
+            <script>
+
+                /* Realice una página web que solicite el ingreso alguna de estas palabras (casa, mesa, 
+                perro, gato) luego mostrar la palabra traducida en inglés. Es decir, si se ingresa 'casa' 
+                debemos mostrar el texto 'house' en la página.*/
+
+                let palabra = prompt('Introduzca una de estas palabras (casa, mesa, perro, gato)');
+
+                switch (palabra){
+
+                    case 'casa':
+                        document.write('La traduccion al ingles es: house');
+                        break;
+                    case 'mesa':
+                        document.write('La traduccion al ingles es: table');
+                        break;
+                    case 'perro':
+                        document.write('La traduccion al ingles es: dog');
+                        break;
+                    case 'gato':
+                        document.write('La traduccion al ingles es: cat');
+                        break;
+                    default:
+                        document.write('La palabra introducida no esta en la lista');
+
+                }
+
+
+
+
+            </script>
+
+        </body>
+</html>
